@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Yacka - Covoiturer au quotidien en Centre-Val de Loire</title>
+	<meta name="description" content="Free bootstrap template Atlas">
+	<link rel="icon" href="img/favicon.png" sizes="32x32" type="image/png">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+	<!-- custom.css -->
+  <link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/cookiealert.css" media="all">
+	<!-- bootstrap.min.css -->
+	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- font-awesome -->
+	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- AOS -->
+	<link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+	<div class="alert text-center cookiealert" role="alert">
+
+    🍪 Nous ne stockons sur votre ordinateur/tablette/smartphone que les cookies nécessaires au fonctionnement du service Yacka. En continuant à utiliser ce site, vous acceptez ce stockage.<a href="mentions-legales.html" target="_blank">En savoir plus</a>
+
+		<a class='btn btn-yacka-green rounded-pill shadow-sm cta acceptcookies'>Fermer</a>
+	</div>
+
+	<!-- banner -->
+	<div class="jumbotron jumbotron-fluid main-img" id="banner">
+		<div class="container text-center text-md-left">
+			<header>
+				<div class="row justify-content-between">
+					<div class="col-4">
+						<img src="img/brand/logo.svg" alt="logo">
+					</div>
+
+					<div class="col-8 align-self-center text-right d-none d-lg-block"> <!-- only big screen-->
+
+<!-- 						<a href="#" class="lead btn btn-yacka-dark rounded-pill shadow-sm text-white transparent">Communauté</a>
+						<a href="#" class="lead btn btn-yacka-dark rounded-pill shadow-sm text-white transparent">Soutenir</a>
+						<a href="#" class="lead btn btn-yacka-dark rounded-pill shadow-sm text-white transparent">Evénementiel</a>
+ -->
+						<a href="login.html" class="lead btn btn-yacka-dark rounded-pill shadow-sm yacka-white-text">Connexion</a>
+						<a href="signup.html" class="lead btn btn-yacka-white rounded-pill shadow-sm yacka-dark-text">Inscription</a>
+					</div>
+
+					<div class="col-8 align-self-center text-right d-block d-lg-none"><!-- only small screen-->
+						<div class="dropdown show">
+							<a class="btn dropdown-toggle text-white" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+<!-- 								<a href="#" class="dropdown-item text-secondary">Communauté</a>
+								<a href="#" class="dropdown-item text-secondary">Soutenir</a>
+								<a href="#" class="dropdown-item text-secondary">Evénementiel</a>
+ -->
+								<a href="login.html" class="dropdown-item yacka-green-text">Connexion</a>
+								<a href="signup.html" class="dropdown-item yacka-dark-text">Inscription</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</header>
+      <div class="container d-md-flex flex-md-row" id="banner-content">
+        <div class="d-flex flex-column justify-content-center">
+          <div class="d-block">
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-4 text-white font-weight-bold my-4" id="banner-text">
+            </h1>
+          </div>
+          <div class="d-none d-md-block">
+              <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+                Covoiturer au quotidien en Centre-Val de Loire, simplement
+              </p>
+          </div>
+        </div>
+          <div class="row align-items-center">
+            <div class="col-7 d-block d-md-none pr-0">
+                <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
+                  Covoiturer au quotidien en Centre-Val de Loire, simplement
+                </p>
+                <!--         avec Yacka 🚀
+                 -->
+            </div>
+            <div class="col-5 col-md-12">
+                <img id="yackar"/>
+            </div>
+          </div>
+      </div>
+
+      <div class="container d-flex flex-row mt-2">
+          <div id="banner-fab-btn" class="btn-group-fab-index" role="group" aria-label="FAB Menu">
+            <div class="btn-main-sub-wrap">
+              <button type="button" class="btn btn-main btn-yacka-dark yacka-white-text rounded-pill has-tooltip shadow-sm" data-placement="left"
+                title="Partager un trajet"><span class="btn-main-label"><span><b>Partager votre premier trajet</b></span></span><span class="btn-main-icon"><i class="fa fa-times"></i></span></button>
+              <button id="howto-page-driver-btn" type="button"
+                class="btn btn-sub btn-yacka-white rounded-pill has-tooltip shadow-sm" data-placement="left"
+                title="Proposer un trajet"><span class="btn-sub-content"><span class="btn-sub-label mr-1">Conducteur</span><img width="18" src='../img/icons/driver_icon.svg'></span></button>
+              <button id="howto-page-passenger-btn" type="button"
+                class="btn btn-sub btn-yacka-white rounded-pill has-tooltip shadow-sm" data-placement="left"
+                title="Demander un trajet"><span class="btn-sub-content"><span class="btn-sub-label mr-1">Passager</span><img width="16" src='../img/icons/hep_icon.svg'></span></button>
+            </div>
+          </div>
+      </div>
+
+<!--  			<a class='btn btn-yacka-dark yacka-white-text rounded-pill shadow-sm mt-2' href="howto.html"><b>Partager votre premier trajet</b></a>
+ -->
+      <div>
+        <div class="ml-auto mr-auto mt-3 mb-3 bounce scroll-chevron"></div>
+      </div>
+  	</div>
+  </div>
+
+<!-- top cards -->
+
+<!-- 	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first top-card" hidden>
+
+		<div class="container d-none d-md-block d-lg-block">
+			<div class="row justify-content-between text-center text-md-left user-review-container">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-sm-6">
+					<div class="card card-inner" id="top-1">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-2 pr-0">
+									<img src="img/avatars/av1.png" class="img img-rounded img-fluid" style="border-radius: 50%;"/>
+								</div>
+								<div class="col-md-10">
+									<p class="yacka-green-text"><strong>Le témoignage de ...</strong></p>
+									<p>Lorem Ipsum is simply dummy text of the pr make Lorem Ipsum is simply dummy text of the pr make</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-sm-6">
+					<div class="card card-inner" id="top-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-2 pr-0">
+									<img src="img/avatars/av1.png" class="img img-rounded img-fluid" style="border-radius: 50%;"/>
+								</div>
+								<div class="col-md-10">
+									<p class="yacka-green-text"><strong>Le témoignage de ...</strong></p>
+									<p>Lorem Ipsum is simply dummy text of the pr make Lorem Ipsum is simply dummy text of the pr make</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4 d-sm-block d-md-none">
+			<div class="row justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-bottom" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+					<div class="card card-inner" id="top-1">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-10">
+									<p class="yacka-green-text"><strong>Le témoignage de ...</strong></p>
+									<p>Lorem Ipsum is simply dummy text of the pr make Lorem Ipsum is simply dummy text of the pr make</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-bottom" data-aos-duration="1000" data-aos-once="true" class="col-md-6">
+					<div class="card card-inner" id="top-2">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-10">
+									<p class="yacka-green-text"><strong>Le témoignage de ...</strong></p>
+									<p>Lorem Ipsum is simply dummy text of the pr make Lorem Ipsum is simply dummy text of the pr make</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+ -->
+
+<!-- floating cards -->
+  <div class="floating-area">
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-1">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-lg-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!-- 							<a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-lg-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					<img src="" alt="" class="right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4 d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+          <div class="black-layer rounded-corner-img"></div>
+          <div class="text-pane-mobile">
+            <h5 class="card-title text-white"></h5>
+            <p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-2">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+					<div class="black-layer rounded-corner-img"></div>
+					<div class="text-pane-mobile">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-3">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					 <img src="" alt="" class="right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+					<div class="black-layer rounded-corner-img"></div>
+					<div class="text-pane-mobile">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-4">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+					<div class="black-layer rounded-corner-img"></div>
+					<div class="text-pane-mobile">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-5">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					 <img src="" alt="" class="right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+					<div class="black-layer rounded-corner-img"></div>
+					<div class="text-pane-mobile">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white">.</p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-6">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="rounded-corner-img">
+          </div>
+					<div class="black-layer rounded-corner-img"></div>
+					<div class="text-pane-mobile">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="card-details yacka-banner-green-1">
+      <div class="container">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-md-8 col-lg-10 d-flex-centered">
+            <div class="my-4 details-back">
+              <div class="card-body yacka-white">
+                <div class="d-flex flex-row justify-content-between align-self-center">
+                  <div><h5 class="card-title yacka-dark-text"></h5></div>
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+                <p class="card-details-contents yacka-dark-text"></p>
+                <div class="d-flex flex-row justify-content-end align-self-center">
+                  <div><span class="close-span clickable">Fermer</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	</div>
+  </div>
+
+	<!-- feature (green background) -->
+	<!--<div class="jumbotron jumbotron-fluid feature" id="feature-last">
+	<div class="container">
+	<div class="row justify-content-between text-center text-md-left">
+	<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last">
+	<h2 class="font-weight-bold">Safe and reliable</h2>
+	<p class="my-4">
+	Duo suas detracto maiestatis ad, commodo lucilius invenire nec ad,
+	<br> eum et oratio disputationi. Falli lobortis his ad
+</p>
+<a href="#" class="btn my-4 font-weight-bold atlas-cta cta-blue">Learn More</a>
+</div>
+<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
+<img src="img/feature-2.png" alt="Safe and reliable" class="mx-auto d-block">
+</div>
+</div>
+</div>
+</div>-->
+
+<!-- price table -->
+<!--<div class="container my-4 py-2" id="price-table">
+<h2 class="text-center font-weight-bold d-block mb-3">Check our pricing</h2>
+<div class="row">
+<div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+<h4 class="my-4">STARTUP</h4>
+<p class="font-weight-bold">$ <span class="display-2 font-weight-bold">0</span> / MO.</p>
+<ul class="list-unstyled">
+<li>Up to 5 Documents</li>
+<li>Up to 3 Reviews</li>
+<li>5 team Members</li>
+<li>Limited Support</li>
+</ul>
+<a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+</div>
+<div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5 rounded" id="price-table__premium">
+<h4 class="my-4">PREMIUM</h4>
+<p class="font-weight-bold">$ <span class="display-2 font-weight-bold">10</span> / MO.</p>
+<ul class="list-unstyled">
+<li>Up to 15 Documents</li>
+<li>Up to 10 Reviews</li>
+<li>25 team Members</li>
+<li>Limited Support</li>
+</ul>
+<a href="#" class="btn my-4 font-weight-bold atlas-cta cta-green">Get Free</a>
+</div>
+<div data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" data-aos-once="true" class="col-md-4 text-center py-4 mt-5">
+<h4 class="my-4">PROFESSIONAL</h4>
+<p class="font-weight-bold">$ <span class="display-2 font-weight-bold">30</span> / MO.</p>
+<ul class="list-unstyled">
+<li>Unlimited Documents</li>
+<li>Unlimited Reviews</li>
+<li>Unlimited Members</li>
+<li>Unlimited Support</li>
+</ul>
+<a href="#" class="btn my-4 font-weight-bold atlas-cta cta-ghost">Get Free</a>
+</div>
+</div>
+</div>-->
+
+<!-- client -->
+<!--<div class="jumbotron jumbotron-fluid">
+<div class="container">
+<div class="row">
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-1.png" class="mx-auto d-block">
+</div>
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-2.png" class="mx-auto d-block">
+</div>
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-3.png" class="mx-auto d-block">
+</div>
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-4.png" class="mx-auto d-block">
+</div>
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-5.png" class="mx-auto d-block">
+</div>
+<div class="col-sm-4 col-md-2 py-2 align-self-center">
+<img src="img/client-6.png" class="mx-auto d-block">
+</div>
+</div>
+</div>
+</div>-->
+
+<!-- contact -->
+<div class="jumbotron jumbotron-fluid" id="contact" style="padding-bottom: 0;">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-md-6 text-white">
+				<h2 class="font-weight-bold text-white">Contactez-nous</h2>
+				<p class="my-4 text-white">
+					Besoin d'une info, suggestion, problème d'utilisation&nbsp;?
+					<br>Complétez ce message ou contactez-nous directement :
+				</p>
+				<ul class="list-unstyled">
+					<li>Courriel : contact@yacka.fr</li>
+					<li>Téléphone : 07 89 04 62 54</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<form action="/contact" method="POST">
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="name">Nom Prénom&ast;</label>
+							<input type="name" name="name" class="form-control" id="name">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="Email">Votre courriel&ast;</label>
+							<input type="email" name="email" class="form-control" id="Email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="content">Votre message&ast;</label>
+						<textarea class="form-control" name="content" id="content" rows="3"></textarea>
+					</div>
+          <div><sub><i>&ast;Tous les champs doivent être remplis</i></sub></div>
+					<button type="submit" id="valid" class="btn font-weight-bold atlas-cta atlas-cta-wide my-3 yacka-white-text">Envoyer</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- copyright -->
+<div class="jumbotron jumbotron-fluid" id="copyright">
+	<div class="container">
+		<div class="row justify-content-between">
+<!--			<div class="col-md-4 text-white align-self-center text-center text-md-left my-2">
+				<ul class="yacka-footer">
+ 					<li><a href="apropos.html">Notre histoire</a></li>
+					<li><a href="concept.html">Concept</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="presse.html">Presse</a></li>
+				</ul>
+			</div>
+ -->
+			<div class="col-md-4 text-white align-self-center text-center text-md-left my-2">
+				<ul class="yacka-footer">
+					<li><a href="howto.html?role=driver">Aide</a></li>
+<!-- 					<li><a href="lequipe.html">L'équipe Yacka</a></li>
+ -->
+					<li><a href="mentions-legales.html">Mentions Légales</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 text-white align-self-center text-center text-md-left my-2">
+				<p class="yacka-white-text">Vous souhaitez promouvoir Yacka et le covoiturage du quotiden en Centre-Val de Loire&nbsp;? N'hésitez pas à en parler autour de vous et sur les réseaux sociaux que vous utilisez&nbsp;!
+			</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="col-md-6 text-white align-self-center text-center text-md-left my-2">
+				Copyright © <script>document.write(new Date().getFullYear()); </script> Yacka.
+			</div>
+			<div class="col-md-6 align-self-center text-center text-md-right my-2" id="social-media">
+
+<!-- 				<a href="https://www.facebook.com/YACKA.partager.la.voiture/" class="d-inline-block text-center ml-2">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+ -->
+				<a href="https://www.linkedin.com/company/yacka/" class="d-inline-block text-center ml-2">
+					<i class="fa fa-linkedin" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/aos.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index.js"></script>
+
+<!-- Sentry stuff -->
+
+<!--
+<script src="https://browser.sentry-cdn.com/6.16.1/bundle.tracing.min.js"
+  integrity="sha384-hySah00SvKME+98UjlzyfP852AXjPPTh2vgJu26gFcwTlZ02/zm82SINaKTKwIX2"
+  crossorigin="anonymous"
+></script>
+<script type="text/javascript">
+  Sentry.init({
+    dsn: 'https://2311b3bb5e6b48c2a0d83ee07456c7c8@o1094336.ingest.sentry.io/6118185',
+    // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+    // if your build tool supports it.
+    release: "Yackafrontend@0.0.1",
+    integrations: [new Sentry.Integrations.BrowserTracing({
+      tracingOrigins: [environment.web_manager_url, environment.api_url, /^\//],
+    })],
+
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production, or using tracesSampler
+    // for finer control
+    tracesSampleRate: 1.0,
+  });
+</script>
+
+ -->
+<script>
+AOS.init({});
+</script>
+
+<!-- Facebook Pixel Code -->
+
+<!-- <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '315838472734623');
+fbq('track', 'PageViewYacka');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=315838472734623&ev=PageViewYacka&noscript=1"
+/></noscript>
+ -->
+<!-- End Facebook Pixel Code -->
+
+<!-- Linkedin Pixel Code -->
+
+<!-- <script type="text/javascript">
+_linkedin_partner_id = "3528017";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3528017&fmt=gif" />
+</noscript>
+ -->
+<!-- End Linkedin Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRZQCMFRXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRZQCMFRXG');
+</script>
+ -->
+</body>
+
+</html>

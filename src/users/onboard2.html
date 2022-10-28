@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+* Yacka Dev Team
+* Base page for User
+* Mai 2019
+-->
+
+<html lang="fr">
+
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Yacka">
+	<meta name="author" content="Yacka Dev Team">
+	<meta name="keyword"
+	content="Yacka,yacka,covoiturage,co-voiturage,auto partage,Centre Val de Loire,Centre Val-de-Loire,BlaBlaCar,blablacar,Karos,domicile,travail,économie,LaRoueVerte.com,voiture,Klaxit,BlaBlaLines,blablalines">
+	<title>Yacka - Configuration</title>
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Icons-->
+	<link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+	<link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+	<link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+	<!-- Main styles for this application-->
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/common.css" rel="stylesheet">
+	<link href="../css/users/onboard2.css" rel="stylesheet">
+	<link href="../vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-lg-show">
+	<div class="yacka-header">
+		<header style="border:none;" class="app-header">
+			<div class="text-left">
+				<div id="hello-world-div" class="content">
+					<p id="hello-world" class="mb-0 pb-0 ml-2 yacka-white-text" style="font-size:25px;">Configurez votre compte</p>
+					<p id="hello-world-msg" class="mb-0 mt-0 ml-2 pb-0 yacka-white-text" style="font-size:15px;">Le minimum requis pour partager des trajets</p>
+				</div>
+			</div>
+		</header>
+		<div class="header-offset">
+		</div>
+	</div>
+	<div id="map-container">
+		<div id="map"></div>
+
+	</div>
+	<div class="app-body-sm">
+		<div id="modals-holder"></div>
+
+		<div class="main" id="step-1">
+			<div class="content animated-fade-in">
+				<div class="yackard">
+					<div class="yackard-body">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<div class="yacka-label">Photo de profil (5 Mo max)</div>
+								<div class="row form-group ml-1">
+									<div class='avatar-sidebar'>
+										<img tabindex="1" id="photo" class='avatar-pic rounded-circle mr-2' alt='User Pic' onclick="upload_photo()"/>
+									</div>
+<!-- 									<a type="button" class="btn yacka-profil-button" onclick="upload_photo()"><i class="icons mt-2 font-2xl d-block icon-picture"></i></a>
+ -->
+ 									<input type="file" id="upload-photo" accept=".png,.jpg,.jpeg" style="display:none"/>
+								</div>
+								<div class="form-group mb-0">
+									<div class="yacka-label">Qui êtes-vous ? <i class="ml-1 fa fa-question-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Seul votre prénom sera visible par les autres usagers de Yacka"></i></div>
+									<input tabindex="2" class="form-control yacka-input mb-0" id="surname" type="text" name="surname" placeholder="* Prénom">
+								</div>
+								<div class="form-group mb-0">
+									<input tabindex="3" class="form-control yacka-input mt-1" id="name" type="text" name="name" placeholder="* Nom (pas visible par les autres usagers de Yacka)">
+								</div>
+								<div tabindex="4" class="form-group mt-1">
+									<select class="custom-select form-group" required name="gender" id="gender">
+										<option value="" disabled selected hidden>* Civilité</option>
+										<option value="H">Homme</option>
+										<option value="F">Femme</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<div class="yacka-label">Numéro de téléphone (facultatif) <i class="ml-1 fa fa-question-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Ce numéro de téléphone, si vous l'indiquez, ne sera visible que par les usager(ère)s de Yacka avec lesquel(le)s vous avez accepté de partager un trajet."></i></div>
+
+                  <input tabindex="5"  id="phone" type="tel" name="phone" placeholder="0123456789" pattern="^([0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2})$">
+
+<!-- 									<input tabindex="5" class="form-control yacka-input mt-0" id="phone" type="tel" name="phone" placeholder="0123456789" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+ -->
+								</div>
+
+ 								<div class="form-group">
+									<div class="yacka-label">* A propos de moi</div>
+									<textarea tabindex="7" class="form-control yacka-input mt-0" id="aboutme" type="text" name="aboutme" rows="3" maxlength="190" placeholder="Ce qu'il vous semble utile d'indiquer avant de partager un trajet avec quelqu'un d'autre..."></textarea>
+								</div>
+                <div class="row explanation">
+                  <p class="col-lg-12">* Champs obligatoires</p>
+                </div>
+								<div class="form-group">
+									<div class="yacka-label">Préférences de voyage</div>
+									<div class="btn-group mt-1" style="display: grid;">
+										<input id="music-id" type="hidden" value="1">
+										<input id="smoke-id" type="hidden" value="1">
+										<input id="speak-id" type="hidden" value="1">
+										<a id="button-music" type="button"><img class= "pref-button " src= "../img/icons/light_music_icon.svg " alt= "Music Pic "/>Je suis pas contre la radio ou un peu de musique en voiture</a>
+										<a id="button-smoke" type="button"><img class= "pref-button " src= "../img/icons/light_smoke_icon.svg " alt= "Smoke Pic "/>J'aime bien fumer en voiture</a>
+										<a id="button-speak" type="button"><img class= "pref-button " src= "../img/icons/light_speak_icon.svg " alt= "Speak Pic "/>Je suis d'un naturel causant</a>
+									</div>
+								</div>
+
+                <div class="row">
+                  <div class="col-md-8 order-md-12">
+    								<div class="form-group text-center">
+    									<button id="next1" class="btn btn-pill btn-lg yacka-button-valid" type="button" onClick="valid()">Suivant</button>
+    								</div>
+                  </div>
+                  <div class="col-md-4 order-md-1">
+                    <div class="form-group text-center">
+                      <button id="logout-btn" class="btn btn-pill btn-lg yacka-button-deconnect" type="button"><img src="../img/icons/logout.svg" width="30" height="30"> Déconnexion</button>
+                    </div>
+                  </div>
+                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- CoreUI and necessary plugins-->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/pace-progress/pace.min.js"></script>
+	<script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+	<!-- Plugins and scripts required by this view-->
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/users/onboard2.js"></script>
+</body>
+
+</html>

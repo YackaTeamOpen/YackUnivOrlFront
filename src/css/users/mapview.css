@@ -1,0 +1,20 @@
+
+#map {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#msg {
+	flex: 0 0 50%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#container-msg {
+	display: table;
+    height: 100%;
+    position: absolute;
+	width: 100%;
+}

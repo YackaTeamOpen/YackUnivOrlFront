@@ -1,0 +1,13 @@
+/.idea
+/.vs
+node_modules
+dist
+**.js.map
+**.css.map
+logs-alpha/
+logs-prod/
+src/js/*.js
+src/js/users/*.js
+src/js/admin/*.js
+src/js/event/*.js
+src/js/companies/*.js

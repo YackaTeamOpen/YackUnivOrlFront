@@ -1,0 +1,89 @@
+a.map-link:hover {
+	text-decoration: none;
+}
+
+.email-icon {
+	font-size: 20pt;
+}
+
+.info-container {
+	margin-top: 20px;
+}
+
+.grey-text {
+	color: grey;
+}
+
+.fixed-content {
+	position: fixed;
+	bottom: 0px;
+	margin: auto;
+}
+
+.trip-sidebar {
+	width: 67px;
+	padding-right: 0;
+	padding: 0 !important;
+}
+
+.trip-sidebar-separator {
+	width: 54px;
+	padding-right: 0;
+}
+
+.text:before {
+	content: '';
+}
+
+.vl {
+	border-right: 2px solid var(--yacka-dark);
+	height: 45px;
+}
+
+.table .text {
+	position: relative;
+	padding: 0 !important
+}
+
+.table th .text {
+}
+
+.table .text span {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: absolute;
+	width: 100%;
+}
+
+.table thead th {
+	border: none;
+	vertical-align: middle;
+}
+
+.table th {
+	border: none;
+}
+
+.yacka-badge-proposed {
+	/*position: absolute;*/
+	top: 35%;
+	left: 0;
+}
+
+.yacka-badge-requested {
+	/*position: absolute;*/
+	top: 35%;
+	right: 45px;
+}
+
+.yackaday-card .right-sidebar {
+	-ms-flex: 0 0 80px;
+	flex: 0 0 80px;
+}
+
+.available-days-holder{
+	/*text-align: center;*/
+	width: 100%;
+
+}

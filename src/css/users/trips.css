@@ -1,0 +1,213 @@
+div.header-offset > div {
+  margin-top: var(--header-height);
+}
+
+/*.days-sidebar {
+	-ms-flex: 0 0 110px;
+	flex: 0 0 110px;
+	display: flex;
+	align-items: center;
+	flex-flow: row-reverse;
+}
+*/
+.card-type-intro p {
+  position: relative;
+  color: var(--yacka-green);
+  background-color: var(--yacka-dark);
+  font-size: 15px;
+  font-style:  oblique;
+}
+
+.badge.yacka-badge-dark.change-button {
+  background-color: transparent;
+  border-color: var(--yacka-dark);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-dark.change-button:hover {
+  background-color: var(--yacka-dark);
+  border-color: var(--yacka-dark);
+  color : var(--yacka-white);
+}
+
+.badge.yacka-badge-red.delete-button {
+  background-color: var(--yacka-red);
+  border-color: var(--yacka-red);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-red.delete-button:hover {
+  background-color: var(--yacka-dark);
+  border-color: var(--yacka-dark);
+  color : var(--yacka-red);
+}
+
+.badge.yacka-badge-yellow.cancel-button {
+  background-color: var(--yacka-yellow);
+  border-color: var(--yacka-yellow);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-yellow.cancel-button:hover {
+  background-color: transparent;
+  border-color: var(--yacka-yellow);
+  color : var(--yacka-yellow);
+}
+
+.badge.yacka-badge-green.valid-button {
+  background-color: var(--yacka-green);
+  border-color: var(--yacka-green);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-green.valid-button:hover {
+  background-color: transparent;
+  border-color: var(--yacka-green);
+  color : var(--yacka-green);
+}
+
+.donut-col {
+  text-align: center;
+}
+
+.donut-img {
+  margin:  auto !important;
+}
+
+.btn-col-left {
+    text-align: left;
+}
+
+.btn-col-rght {
+    text-align: right;
+}
+
+.yacka-points-amount {
+  background-color: var(--yacka-dark);
+}
+
+/*.hour .form-control {
+  height: calc(1.5em + 0.75rem);
+}
+*/
+#new-outward{
+  flex: 0 1 auto;
+  width:  100px;
+}
+
+.input-group-prepend span,
+.input-group-append span {
+  color: var(--yacka-dark);
+  border: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.recurrence-interval, #new-nb-seats, #new-nb-stops, #new-nb-pass {
+  max-width: 4em;
+  background-color: var(--white);
+}
+
+/*.recurrence-interval {
+  max-width: 4em;
+  background-color: var(--white);
+}
+*/
+/*#validity-start-date,
+#validity-end-date {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+*/
+
+#new-validity-dates input {
+  max-width: 6em;
+}
+
+.weekdays .btn {
+  min-width: 30px;
+  padding: 8px;
+  margin: 0px;
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  background-color: var(--light);
+}
+
+.weekdays button:hover {
+  border: 1px solid var(--yacka-gray);
+}
+
+.weekdays button.active {
+  background-color: var(--yacka-dark);
+  color: var(--white);
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: var(--yacka-dark);
+  background-color: var(--yacka-dark);
+}
+
+.tooltip {
+  z-index: 2005;
+}
+
+.btn-toastr-warning:hover {
+  background-color: var(--yacka-yellow);
+  color : var(--yacka-dark);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+}
+
+.btn-toastr-warning {
+  display: inline-block;
+  background-color: var(--yacka-dark);
+  color : var(--yacka-yellow);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  padding:  0 10px !important;
+}
+
+.btn-toastr-success:hover {
+  background-color: var(--yacka-green);
+  color : var(--yacka-dark);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+}
+
+.btn-toastr-success {
+  display: inline-block;
+  background-color: var(--yacka-dark);
+  color : var(--yacka-green);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  padding:  0 10px !important;
+}
+
+.toast-close-button {
+  position:  static;
+  background-color: var(--yacka-dark) !important;
+  color : var(--yacka-yellow) !important;
+  font-size:  14px !important;
+  font-weight:  400 !important;
+  line-height:  21px !important;
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  padding:  0 10px !important;
+  opacity:  1 !important;
+  text-shadow: unset !important;
+}
+
+.toast-close-button:hover {
+  position:  static;
+  background-color: var(--yacka-yellow) !important;
+  color : var(--yacka-dark) !important;
+  font-size:  14px !important;
+  font-weight:  400 !important;
+  line-height:  21px !important;
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  padding:  0 10px !important;
+  opacity:  1 !important;
+  text-shadow: unset !important;
+}

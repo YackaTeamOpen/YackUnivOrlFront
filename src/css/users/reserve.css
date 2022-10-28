@@ -1,0 +1,79 @@
+.email-icon {
+	font-size: 20pt;
+}
+
+.info-container {
+	margin-top: 20px;
+}
+
+.grey-text {
+	color: grey;
+}
+
+.fixed-content {
+	position: fixed;
+	bottom: 0px;
+	margin: auto;
+}
+
+.trip-sidebar {
+	width: 67px;
+	padding-right: 0;
+	padding: 0 !important;
+}
+
+.trip-sidebar-separator {
+	width: 54px;
+	padding-right: 0;
+}
+
+.vl {
+	border-right: 2px solid var(--yacka-dark);
+	height: 25px;
+}
+
+.table .text {
+  position: relative;
+  padding: 0 !important
+}
+
+.table th .text {
+}
+
+.table .text span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+  width: 100%;
+}
+
+.futur-arrow {
+		/*background-image: url('http://cnt-a-yackapp:3000/img/icons/green_donut.svg');
+		background-size:15px;
+		background-position: left;
+		background-origin: content-box;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    height: 40px;
+		border: none;
+		padding: 0px;
+		*/
+		width: 15px;
+}
+
+
+
+
+.text:before {
+  content: '';
+  display: inline-block;
+}
+
+.table thead th {
+	border: none;
+}
+
+.table th {
+	border: none;
+}

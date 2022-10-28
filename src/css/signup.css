@@ -1,0 +1,13 @@
+
+
+.form-group > .btn, .form-group > a {
+	margin: auto;
+	padding: 0.7rem;
+	width: 100%;
+}
+
+
+.form-group > a {
+	cursor: pointer;
+}
+/*# sourceMappingURL=signup.css.map */

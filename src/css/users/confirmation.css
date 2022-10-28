@@ -1,0 +1,62 @@
+.hr-separator {
+  height:1px;
+  border:none;
+  background-color:var(--yacka-green);
+}
+
+label {
+    display: block !important;
+    font: 1rem 'Fira Sans', sans-serif !important;
+}
+
+input,
+label {
+    margin: .4rem 0 !important;
+}
+
+.note {
+    font-size: .8em !important;
+}
+
+.yackard-confirmation {
+  margin-top: 150px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.yacka-button-valid{
+	background-color: var(--yacka-green);
+	color: var(--yacka-dark);
+	height: 55px;
+	width: 85%;
+}
+
+
+.send-confirmation{
+	height: 240px;
+	width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+}
+
+.text-center {
+  margin-bottom: 0px;
+}
+
+.content{
+
+}
+
+.animated-fade-in {
+  padding: 18px;
+}
+
+.yacka-label {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto
+}

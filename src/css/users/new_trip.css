@@ -1,0 +1,198 @@
+#yacka-points-price {
+  font-size: 1.7em;
+}
+
+a.validator {
+  width: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#hello-world-psg,
+#hello-world-drv {
+  font-size: 25px;
+}
+
+@media (max-width: 400px) {
+  #hello-world-psg,
+  #hello-world-drv {
+    font-size: 17px;
+  }
+}
+
+.yacka-label {
+  color: var(--yacka-dark);
+}
+
+#start-and-arrival-addresses {
+  margin-top: 10px;
+}
+
+/*select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;       /* Remove default arrow */
+/*   background-image: ;   /* Add custom arrow */
+/*}
+*/
+
+#trip-type-container, #validity-frame {
+  background-color: var(--light);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: var(--yacka-dark);
+  background-color: var(--yacka-dark);
+}
+
+/*.custom-control-label::before {
+    background-color: darkorange;
+}
+*/
+#hour-type input{
+  flex: 0 1 auto;
+  width:  90px;
+}
+
+#address-explanation {
+  padding: 7px 7px 0;
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark-gray);
+}
+
+.explanation p {
+  font-size: 12px;
+  color: var(--yacka-dark-gray);
+  margin-bottom: 7px;
+}
+
+#trip-type-container .btn {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#trip-type-container .form-control {
+  height: calc(1.5em + 0.75rem);
+}
+
+.btn-col-rght {
+    text-align: right;
+}
+
+#new-outward{
+  flex: 0 1 auto;
+  width:  100px;
+}
+
+.input-group-prepend span,
+.input-group-append span {
+  color: var(--yacka-dark);
+  border: 0;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.recurrence-interval {
+  max-width: 4em;
+  background-color: var(--white);
+}
+
+#new-validity-dates input {
+  max-width: 6em;
+}
+
+.weekdays .btn {
+  min-width: 30px;
+  padding: 8px;
+  margin: 0px;
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  background-color: var(--light);
+}
+
+.weekdays button:hover {
+  border: 1px solid var(--yacka-gray);
+}
+
+.weekdays button.active {
+  background-color: var(--yacka-dark);
+  color: var(--white);
+}
+
+.tooltip {
+  z-index: 2005;
+}
+
+.btn-toastr-success:hover {
+  background-color: var(--yacka-green);
+  color : var(--yacka-dark);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+}
+
+.btn-toastr-success {
+  background-color: var(--yacka-dark);
+  color : var(--yacka-green);
+  border-radius: 5px;
+  border: 1px solid var(--yacka-dark);
+  padding:  0 10px !important;
+}
+
+#map {
+  position: absolute;
+  margin-top: calc(var(--header-height) + var(--header-offset-height));
+  height: calc(100vh - (var(--header-height) + var(--header-offset-height)));
+  width: 100%;
+  z-index: 1040;
+}
+
+.app-body-sm .yackard-body {
+  position: relative;
+  z-index: 1041;
+}
+
+#button-on-map {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  box-shadow:  0 0 10px 3px var(--yacka-dark-gray);
+  border-radius:  50em;
+  z-index: 1041;
+}
+
+.badge.yacka-badge-yellow.cancel-button {
+  background-color: var(--yacka-yellow);
+  border-color: var(--yacka-yellow);
+  color : var(--yacka-dark);
+  height:  55px;
+  width:  100%;
+  border-radius:  50em;
+  font-weight: normal;
+  font-size: 1.09375rem;
+}
+
+.badge.yacka-badge-green.valid-button {
+  background-color: var(--yacka-green);
+  border-color: var(--yacka-green);
+  color : var(--yacka-dark);
+  height:  55px;
+  width:  100%;
+  border-radius:  50em;
+  font-weight: normal;
+  font-size: 1.09375rem;
+}
+
+.tooltip {
+  z-index: 2005;
+}
+
+.ui-autocomplete {
+  z-index: 2000 !important;
+}

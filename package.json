@@ -1,0 +1,151 @@
+{
+	"name": "YackaApp",
+	"version": "0.3.0",
+	"description": "Application Web",
+	"keywords": [
+		"admin",
+		"admin panel",
+		"admin template",
+		"bootstrap",
+		"css",
+		"dashboard",
+		"framework",
+		"front-end",
+		"responsive",
+		"sass",
+		"ui kit",
+		"webapp"
+	],
+	"homepage": "https://yacka.fr",
+	"bugs": {
+		"url": "",
+		"email": "contact@yacka.fr"
+	},
+	"author": {
+		"name": "Yacka",
+		"url": "http://yacka.fr",
+		"github": "https://github.com/YackaProject",
+		"twitter": "https://twitter.com/Yacka"
+	},
+	"contributors": [
+		{
+			"name": "Clément Charpentier",
+			"url": "https://github.com/clementcharpentier"
+		},
+		{
+			"name": "Théo Guidoux",
+			"url": "https://github.com/zetechmoy"
+		},
+		{
+			"name": "Olivier Lelong",
+			"url": "https://github.com/hopolivier"
+		},
+		{
+			"name": "Pierre Vinois",
+			"url": "https://github.com/pierrev7"
+		}
+	],
+	"main": "src/index.html",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/coreui/coreui-free-bootstrap-admin-template.git"
+	},
+	"scripts": {
+		"build-rm-map": "tree -fi dist/ | grep \"\\.map\" | xargs -I % rm %",
+		"build": "npm-run-all js-compile build-copy build-vendors css-minify css-compile-vendors build-rm-map",
+		"build-clean": "rimraf dist",
+		"build-copy": "copyfiles -a -e \"src/scss/**/*\" -u 1 \"src/**/*\" dist/",
+		"build-vendors": "node build/vendors.js",
+		"css": "npm-run-all --parallel css-compile* --sequential css-prefix css-minify*",
+		"css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss src/css/style.css",
+		"css-compile-vendors": "node build/vendors-sass.js",
+		"css-lint": "stylelint --config build/.stylelintrc --syntax scss \"src/scss/**/*.scss\"",
+		"css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output src/css/style.min.css src/css/style.css",
+		"css-prefix": "postcss --config build/postcss.config.js --replace \"src/css/*.css\" \"!src/css/*.min.css\"",
+		"js": "npm-run-all --parallel js-compile*",
+		"js-compile": "cross-env PLUGINS=true babel src/js/src/ --out-dir src/js/ --source-maps",
+		"js-lint": "eslint src/js/src",
+		"localhost": "browser-sync start --server \"./src\" --serveStatic \"./\" --files \"!./src/js/src/**/*, ./src/**/*, !./src/scss/**/*\"",
+		"pug": "node build/pug.js",
+		"release-version": "node build/change-version.js",
+		"serve": "npm-run-all --parallel localhost watch-css watch-js",
+		"watch-css": "nodemon --ignore dist/ -e scss -x \"npm run css\"",
+		"watch-js": "nodemon --watch src/js/src/ -x \"npm run js\"",
+		"watch-pug": "nodemon -e pug -x \"npm run pug\"",
+		"start": "http-server dist/ -p 80 --cors",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@coreui/coreui": "^2.1.16",
+		"@coreui/coreui-plugin-chartjs-custom-tooltips": "1.2.0",
+		"@coreui/icons": "0.3.0",
+		"@fortawesome/fontawesome-free": "^5.15.2",
+		"bootstrap": "^4.6.0",
+		"bootstrap-datepicker": "^1.9.0",
+		"chart.js": "2.7.3",
+		"core-js": "^3.6.5",
+		"flag-icon-css": "^3.5.0",
+		"font-awesome": "4.7.0",
+		"jquery": "^3.6.0",
+		"jquery-mask-plugin": "^1.14.16",
+		"jquery-ui-dist": "^1.12.1",
+		"leaflet-canvas-markers": "^1.0.7",
+		"litepicker": "^2.0.12",
+		"mime-types": "^2.1.34",
+		"node-sass": "^6.0.0",
+		"pace-progress": "1.0.2",
+		"perfect-scrollbar": "^1.5.1",
+		"popper.js": "^1.16.1",
+		"rrule": "^2.6.8",
+		"simple-line-icons": "2.4.1",
+		"toastr": "^2.1.4"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.14.3",
+		"@babel/core": "^7.14.3",
+		"@babel/plugin-proposal-object-rest-spread": "^7.14.4",
+		"@babel/preset-env": "^7.14.4",
+		"autoprefixer": "^9.8.5",
+		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.2.2",
+		"babel-plugin-transform-es2015-modules-strip": "^0.1.2",
+		"browser-sync": "^2.26.14",
+		"chalk": "^2.4.2",
+		"clean-css-cli": "^4.3.0",
+		"copyfiles": "^2.4.1",
+		"cross-env": "^5.2.1",
+		"eslint": "^7.32.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-react": "^7.31.10",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"foreach-cli": "^1.8.1",
+		"jest": "^24.9.0",
+		"js-beautify": "^1.13.13",
+		"nodemon": "^2.0.7",
+		"npm-run-all": "^4.1.5",
+		"postcss-cli": "^7.1.1",
+		"rimraf": "^2.7.1",
+		"shelljs": "^0.8.4",
+		"stylelint-config-recommended-scss": "^3.3.0",
+		"stylelint-config-standard": "^18.3.0",
+		"stylelint-order": "^4.1.0",
+		"stylelint-scss": "^3.19.0"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"browserslist": [
+		"last 1 major version",
+		">= 1%",
+		"Chrome >= 45",
+		"Firefox >= 38",
+		"Edge >= 12",
+		"Explorer >= 10",
+		"iOS >= 9",
+		"Safari >= 9",
+		"Android >= 4.4",
+		"Opera >= 30"
+	]
+}

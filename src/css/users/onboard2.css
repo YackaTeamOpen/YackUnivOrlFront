@@ -1,0 +1,26 @@
+
+#map {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index:0;
+}
+
+#button-on-map {
+	position: fixed;
+	bottom: 20px;
+}
+
+.tooltip{
+	z-index: 2005;
+}
+
+#photo {
+  cursor:  pointer;
+}
+
+.explanation p {
+  font-size: 12px;
+  color: var(--yacka-dark-gray);
+  margin-bottom: 7px;
+}

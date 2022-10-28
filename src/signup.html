@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+* Yacka Dev Team
+* Base page for User
+* Mai 2019
+-->
+
+<html lang="fr">
+
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Yacka">
+	<meta name="author" content="Yacka Dev Team">
+	<meta name="keyword"
+		content="Yacka,yacka,covoiturage,co-voiturage,auto partage,Centre Val de Loire,Centre Val-de-Loire,BlaBlaCar,blablacar,Karos,domicile,travail,économie,LaRoueVerte.com,voiture,Klaxit,BlaBlaLines,blablalines">
+	<title>Yacka - Inscription</title>
+	<link rel="shortcut icon" href="img/favicon.png">
+	<!-- Icons-->
+	<link href="node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+	<link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+	<!-- Main styles for this application-->
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/common.css" rel="stylesheet">
+	<link href="css/signup.css" rel="stylesheet">
+	<link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-lg-show">
+	<div class="yacka-header">
+		<header style="border:none;" class="app-header">
+			<div class="text-left">
+				<div class="content">
+					<a href="index.html"><i class="fa fa-chevron-left fa-lg yacka-green-text mt-4 mr-2"
+							style="float:left;font-size:20px;"></i></a>
+					<p id="hello-world" class="mb-0 pb-0 yacka-white-text" style="font-size:25px;">Bonjour,</p>
+					<p id="hello-world-msg" class="mb-0 mt-0 ml-2 pb-0 yacka-white-text" style="font-size:15px;">
+						Inscrivez-vous à Yacka !</p>
+
+				</div>
+			</div>
+		</header>
+		<div class="header-offset">
+		</div>
+	</div>
+
+	<div class="app-body-sm">
+
+		<main class="main">
+			<div class="content animated-fade-in">
+				<div class="yackard">
+					<div class="yackard-body">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<div class="row">
+									<div class="col">
+
+										<div tabindex="1" class="form-group">
+											<p>L'identifiant (courriel) de votre compte *</p>
+											<input class="form-control yacka-input" id="email-subscribe" type="email"
+												name="email" placeholder="camille.schtroumpf@exemple.fr">
+										</div>
+										<div tabindex="2" class="form-group">
+											<p>Le mot de passe de votre compte *</p>
+											<input class="form-control yacka-input" id="password-subscribe"
+												type="password" name="password" placeholder="Votre mot de passe">
+										</div>
+
+									</div>
+								</div>
+
+                <div class="form-check form-check-inline yacka-dark-gray-text mb-1">
+                  <input class="form-check-input" id="community-enable" type="checkbox">
+                  <label class="form-check-label" for="community-enable">Ma communauté est abonnée à Yacka (optionnel)</label>
+                </div>
+								<div class="row align-items-center" id="community-input" style="display:none">
+									<div class="col-auto">
+											<p>Code de communauté</p>
+                  </div>
+                  <div class="col-auto">
+                    <div class="form-group">
+											<input class="form-control yacka-input" id="community-code" type="text"
+												name="communitycode" placeholder="XXXXXX">
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group mt-1">
+
+									<div tabindex="3" style="font-size:12px" class="form-check form-check-inline mr-1">
+										<input class="form-check-input" id="cgu" type="checkbox" value="check1">
+										<label class="form-check-label" for="cgu">J'accepte les <a
+												href="files/cgu.pdf">conditions générales
+												d'utilisation</a> *</label>
+									</div>
+								</div>
+
+								<p id="pass-message" style="font-size:12px" class="col-lg-12">* Champs obligatoires</p>
+
+								<div class="row justify-content-center">
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<button id="subscribe-btn" class="btn btn-pill btn-yacka-green"
+												type="button">M'inscrire</button>
+											<button id="continue-btn" class="btn btn-pill btn-yacka-green" type="button"
+												style="display: none;">Continuer</button>
+										</div>
+									</div>
+								</div>
+
+								<hr />
+
+
+								<div class="form-group mb-0" style="display: flex;">
+									<a id="already-an-account-btn" class="text-center">J'ai déjà un compte</a>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+
+	<div id="modals-holder" style="z-index: 2000 !important;"> </div>
+
+
+	<!-- CoreUI and necessary plugins-->
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="node_modules/pace-progress/pace.min.js"></script>
+	<script src="node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+	<!-- Plugins and scripts required by this view-->
+	<script src="node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/signup.js"></script>
+	<script src="js/community.js"></script>
+</body>
+
+</html>

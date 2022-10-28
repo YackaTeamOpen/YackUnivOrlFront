@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+* Yacka Dev Team
+* Base page for User
+* Mai 2019
+-->
+
+<html lang="fr">
+
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Yacka">
+	<meta name="author" content="Yacka Dev Team">
+	<meta name="keyword"
+	content="Yacka,yacka,covoiturage,co-voiturage,auto partage,Centre Val de Loire,Centre Val-de-Loire,BlaBlaCar,blablacar,Karos,domicile,travail,économie,LaRoueVerte.com,voiture,Klaxit,BlaBlaLines,blablalines">
+	<title>Yacka - Menu</title>
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Icons-->
+	<link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+	<link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+	<link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<!-- Main styles for this application-->
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/common.css" rel="stylesheet">
+	<link href="../css/users/menu.css" rel="stylesheet">
+	<link href="../vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-lg-show">
+
+	<div class="yacka-header">
+		<header style="border:none;" class="app-header">
+			<div class="text-left">
+				<div class="content">
+					<a href="home.html"><i class="fa fa-chevron-left fa-lg yacka-green-text mt-4 mr-2" style="float:left;font-size:20px;"></i></a>
+					<p id="hello-world" class="mb-0 pb-0 yacka-white-text" style="font-size:25px;">Mon menu</p>
+					<p id="hello-world-msg" class="mb-0 mt-0 ml-2 pb-0 yacka-white-text" style="font-size:15px;">Votre espace Yacka</p>
+				</div>
+			</div>
+		</header>
+		<div class="header-offset">
+		</div>
+	</div>
+	<!--##############################################  End of header  #################################################################################-->
+	<div class="app-body-sm">
+		<div id="modals-holder"></div>
+		<main class="main">
+			<div class="content animated-fade-in">
+				<div class="yackard">
+					<div class="yackard-body">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<a href="profile.html"><p style="margin-top: 0.6rem;"><img class="img-avatar" src="../img/icons/profile.svg" width="30" height="30"> Mon profil</p></a>
+								<hr>
+								<a href="settings.html"><p><img class="img-avatar" src="../img/icons/settings.svg" width="30" height="30"> Adresses et véhicules</p></a>
+								<hr>
+								<a href="problem.html"><p><img class="img-avatar" src="../img/icons/help.svg" width="30" height="30"> Signaler un problème</p></a>
+								<hr>
+								<a style="cursor: pointer;"><p id="logout-btn"><img src="../img/icons/logout.svg" width="30" height="30"> Me déconnecter</p></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- CoreUI and necessary plugins-->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/pace-progress/pace.min.js"></script>
+	<script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+	<!-- Plugins and scripts required by this view-->
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/users/menu.js"></script>
+</body>
+
+</html>

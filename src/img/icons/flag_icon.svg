@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   data-name="Layer 2"
+   id="Layer_2"
+   viewBox="0 0 35 35"
+   version="1.1"
+   sodipodi:docname="flag_icon.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata11">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs9" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="697"
+     inkscape:window-height="480"
+     id="namedview7"
+     showgrid="false"
+     inkscape:zoom="6.7428571"
+     inkscape:cx="19.279661"
+     inkscape:cy="17.5"
+     inkscape:window-x="224"
+     inkscape:window-y="178"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="Layer_2" />
+  <path
+     d="M3.2,34.75A1.25,1.25,0,0,1,2,33.5V2.32a1.25,1.25,0,0,1,2.5,0V33.5A1.25,1.25,0,0,1,3.2,34.75Z"
+     id="path2" />
+  <path
+     d="M27.05,27.94c-2.91,0-5.91-.55-7.28-3.84-.83-2-9.14-2.24-16.39-1.24A1.25,1.25,0,0,1,3,20.38c4-.55,17.07-2,19,2.76,1,2.36,3.34,2.41,7.11,2.22l1.36-.05V8.3l-1.21.06c-3.83.23-7.79.46-9.57-3.8-.82-2-9.14-2.24-16.39-1.25A1.25,1.25,0,1,1,3,.84c4-.55,17.07-2,19,2.76,1,2.51,3.16,2.5,7.11,2.27.85,0,1.72-.1,2.59-.11a1.21,1.21,0,0,1,.9.36A1.22,1.22,0,0,1,33,7V26.55a1.25,1.25,0,0,1-.38.89,1.31,1.31,0,0,1-.9.36c-.76,0-1.59,0-2.46.06C28.59,27.9,27.82,27.94,27.05,27.94Z"
+     id="path4"
+     style="stroke:#0c2231;stroke-opacity:1" />
+</svg>

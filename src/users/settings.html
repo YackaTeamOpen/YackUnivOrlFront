@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+* Yacka Dev Team
+* Base page for User
+* Mai 2019
+-->
+
+<html lang="fr">
+
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Yacka">
+	<meta name="author" content="Yacka Dev Team">
+	<meta name="keyword"
+		content="Yacka,yacka,covoiturage,co-voiturage,auto partage,Centre Val de Loire,Centre Val-de-Loire,BlaBlaCar,blablacar,Karos,domicile,travail,économie,LaRoueVerte.com,voiture,Klaxit,BlaBlaLines,blablalines">
+	<title>Yacka - Mes paramètres</title>
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Icons-->
+	<link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+	<link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+	<link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
+	<!-- For autocompletion -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+	<!-- Main styles for this application-->
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/common.css" rel="stylesheet">
+	<link href="../css/users/settings.css" rel="stylesheet">
+	<link href="../vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-lg-show">
+	<div class="yacka-header">
+		<header style="border:none;" class="app-header">
+			<div class="text-left">
+				<div class="content">
+					<a href="menu.html"><i class="fa fa-chevron-left fa-lg yacka-green-text mt-4 mr-2"
+							style="float:left;font-size:20px;"></i></a>
+					<p id="hello-world" class="mb-0 pb-0 yacka-white-text" style="font-size:25px;">Adresses et véhicules</p>
+					<p id="hello-world-msg" class="mb-0 mt-0 ml-2 pb-0 yacka-white-text" style="font-size:15px;">Pour faciliter l'enregistrement de vos trajets</p>
+				</div>
+			</div>
+		</header>
+		<div class="header-offset">
+		</div>
+	</div>
+
+	<div class="app-body">
+		<div id="modals-holder"></div>
+		<main class="main">
+			<div class="content animated-fade-in">
+				<div class="yackard">
+					<div class="yackard-body">
+						<div class="card shadow-sm">
+							<div class="card-body list-items" id="settings-container">
+								<div class="yacka-label">Mes adresses</div>
+								<div id="addresses">
+
+<!-- 									<input id="address-id" type="hidden">
+ -->
+								</div>
+
+<!-- 								<div class="form-group">
+									<button id="add-address-button" class="form-control yacka-dark-text text-left"
+										type="button" onclick="addAddress()"><i class="fa fa-plus-circle mr-1"></i>
+										AJOUTER UNE ADRESSE</button>
+								</div>
+ -->
+								<div class="yacka-label mt-2">Mes véhicules</div>
+                <div id="initial-car" car-id="" hidden>
+                </div>
+                <div class="input-group" id="new-car-id">
+                </div>
+                <div id="cars">
+                </div>
+								<div class="form-group" id="add-car-group" hidden>
+									<button id="add-car-button" class="form-control yacka-dark-text text-left"
+										type="button"><i class="fa fa-plus-circle mr-1"></i> AJOUTER
+										UN VEHICULE</button>
+								</div>
+
+<!-- 								<div class="yacka-label mt-4">YackAgenda <i class="ml-1 fa fa-question-circle mr-1"
+										data-toggle="tooltip" data-placement="nearest"
+										title="Pour ajouter l'agenda Yacka dans l'application calendrier de votre choix"></i></div>
+								<div class="form-group">
+									<button id="button-agenda" class="form-control yacka-dark-text text-center mt-1"
+										type="button" onClick="exportYackagenda()">Exporter mon YackAgenda</button>
+								</div>
+ -->
+<!-- 								<div class="yacka-label mt-4">Sécurité</div>
+								<div class="form-group">
+									<button id="button-display" class="form-control yacka-dark-text text-center mt-1"
+										type="button" onClick="displayChangePassword(0)">Modifier mot de passe</button>
+								</div>
+								<div id="div-change-password" style="display:none;">
+									<p>Votre mot de passe doit avoir <b>au minimum 6 caractères</b> et contenir :
+									<ul>
+										<li>Une lettre minuscule</li>
+										<li>Une lettre majuscule</li>
+										<li>Un chiffre</li>
+									</ul>
+									</p>
+									<div class="form-group mb-0">
+										<input class="form-control yacka-input" id="old-password" type="password"
+											name="old-password" placeholder="Ancien mot de passe">
+									</div>
+									<div class="form-group mb-0">
+										<input class="form-control yacka-input" id="new-password" type="password"
+											name="new-password" placeholder="Nouveau mot de passe">
+									</div>
+									<div class="form-group mt-0">
+										<input class="form-control yacka-input" id="new-password-confirm"
+											type="password" name="new-password-confirm"
+											placeholder="Validation nouveau mot de passe">
+									</div>
+									<div class="form-group text-center">
+										<button id="change-password" class="btn btn-pill btn-lg yacka-button-valid"
+											type="button" onClick="changePassword()">Valider mon mot de passe</button>
+									</div>
+								</div>
+
+								<div class="yacka-label mt-4">Mes données</div>
+								<div class="form-group">
+									<button id="button-display-download"
+										class="form-control yacka-dark-text text-center mt-1" type="button"
+										onClick="displayDownload(0)">Consulter mes données</button>
+								</div>
+								<div id="div-download" style="display:none;">
+									<div class="form-group text-center">
+										<button class="btn btn-pill btn-lg yacka-button-valid" type="button"
+											onClick="downloaddata()">Télécharger mes données</button>
+									</div>
+								</div>
+
+								<div class="yacka-label mt-4">Désinscription</div>
+								<div class="form-group">
+									<button id="button-display-unsubscribe"
+										class="form-control yacka-dark-text text-center mt-1" type="button"
+										onClick="displayUnsubscribe(0)">Se désinscrire</button>
+								</div>
+								<div id="div-unsubscribe" style="display:none;">
+									<p><b>Attention, cette opération est irréversible.</b></p>
+									<div class="form-group text-center">
+										<button class="btn btn-pill btn-lg yacka-button-valid" type="button"
+											onClick="unsubscribe()">Supprimer mon compte</button>
+									</div>
+								</div>
+ -->
+ 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- CoreUI and necessary plugins-->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="../node_modules/pace-progress/pace.min.js"></script>
+	<script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+
+	<!-- For autocompletion -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	<!-- Plugins and scripts required by this view-->
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="../js/common.js"></script>
+  <script src="../js/settings_util.js"></script>
+	<script src="../js/users/settings.js"></script>
+</body>
+
+</html>

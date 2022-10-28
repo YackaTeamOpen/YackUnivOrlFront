@@ -1,0 +1,158 @@
+.hr-separator {
+  height:1px;
+  border:none;
+  background-color:var(--yacka-green);
+}
+
+/*label {
+    display: block !important;
+    font: 1rem 'Fira Sans', sans-serif !important;
+}
+*/
+/*input,
+label {
+    margin: .4rem 0 !important;
+}
+*/
+
+.btn-group-fab .btn-sub {
+  padding-right: 0.5rem;
+  padding-left:  0.5rem;
+}
+
+#yacka-points {
+  color: var(--yacka-white);
+}
+
+#yacka-points-amount {
+  line-height: 30px;
+  vertical-align: middle;
+  font-size:  20px;
+  margin:  5px 0;
+}
+
+.yacka-points-amount {
+  background-color: var(--yacka-dark);
+}
+
+.note {
+    font-size: .8em !important;
+}
+
+.card.yackaday-occ-card:last-child {
+  margin-bottom: 0;
+}
+
+.card-body hr {
+  margin: 0.5rem 0;
+}
+
+.card-body .card-title{
+  margin-bottom: 0;
+}
+
+img.card-title {
+  color: purple;
+}
+
+.yacka-card-tab {
+	border-top-left-radius: .25rem !important;
+	border-top-right-radius: .25rem !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+
+.occ-cards-page-btn-group {
+/*  display: flex;
+  flex-wrap: wrap;
+*/  /*text-align: center;*/
+/*  margin-top: 0;
+*/}
+
+.occ-cards-page-btn-group .btn {
+/*  flex-grow: 1;
+*/  font-size: 1.4rem;
+}
+
+/*.occ-cards-page-btn-group .btn-success:hover {
+  background-color: var(--yacka-green);
+  color : var(--yacka-dark);
+  border-color: var(--yacka-dark);
+}
+
+.occ-cards-page-btn-group .btn-success {
+  background-color: var(--yacka-green);
+  color : var(--yacka-white);
+  border-color: var(--yacka-green);
+}
+*/
+
+.occ-cards-page-btn-group .btn-success {
+/*  padding-top: 0;
+*/  background-color: transparent;
+  color : var(--yacka-dark);
+  border-color: transparent;
+}
+
+.occ-cards-page-btn-group .btn-success[disabled] {
+/*  padding-top: 0;
+*/  background-color: transparent;
+  color : transparent;
+  border-color: transparent;
+}
+
+#top-occ-cards-nav {
+  margin-bottom : 1rem;
+}
+
+.badge.yacka-badge-dark.ack-button {
+  background-color: transparent;
+  border-color: var(--yacka-dark);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-dark.ack-button:hover {
+  background-color: var(--yacka-dark);
+  border-color: var(--yacka-dark);
+  color : var(--yacka-white);
+}
+
+.badge.yacka-badge-dark.fast-act-button {
+  background-color: transparent;
+  border-color: var(--yacka-dark);
+  color : var(--yacka-dark);
+}
+
+.badge.yacka-badge-dark.fast-act-button:hover {
+  background-color: var(--yacka-red);
+  border-color: var(--yacka-dark);
+}
+
+.toggle-chevron {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 0rem;
+}
+
+.chevron {
+  /* block or inline-block for smoother animation */
+  display: inline-block;
+  /* Animation when going back to collapsed state */
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.fa-rotate-180 {
+  /* This declares the keyframes used for animation */
+  transform: rotate(180deg);
+/*  animation: spin;
+*/  transition: 0.4s
+}
+
+/* An @rule used to breakdown animation into steps */
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+  }
+}

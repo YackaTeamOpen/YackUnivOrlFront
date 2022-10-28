@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="91.920853pt"
+   height="152.80344pt"
+   viewBox="0 0 91.920853 152.80344"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg12"
+   sodipodi:docname="passenger3.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="796"
+     inkscape:window-height="480"
+     id="namedview14"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.0993789"
+     inkscape:cx="61.999999"
+     inkscape:cy="102"
+     inkscape:window-x="0"
+     inkscape:window-y="43"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg12" />
+  <metadata
+     id="metadata2">
+Created by potrace 1.16, written by Peter Selinger 2001-2019
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.1,0,0,-0.1,-34,156.80343)"
+     id="g10"
+     style="fill:#0c2231;stroke:none">
+    <path
+       d="m 792,1551 c -53,-34 -74,-77 -69,-144 3,-49 8,-62 37,-92 87,-89 228,-55 260,63 15,57 0,109 -45,152 -30,29 -43,34 -92,37 -46,3 -65,0 -91,-16 z"
+       id="path4"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 885,1181 c -59,-26 -101,-66 -125,-116 -24,-49 -70,-258 -70,-317 0,-69 3,-68 -155,-68 -129,0 -145,-2 -169,-21 L 340,639 V 359 c 0,-174 4,-288 10,-300 8,-14 21,-19 56,-19 103,0 114,26 114,265 v 185 h 158 c 86,0 174,5 194,10 66,19 78,45 156,333 40,146 72,277 72,290 0,13 -9,36 -21,51 -18,23 -27,26 -87,26 -43,0 -81,-7 -107,-19 z"
+       id="path6"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 1183,1078 c -6,-7 -41,-125 -78,-263 -77,-285 -82,-299 -121,-339 -54,-54 -96,-66 -235,-66 -136,0 -154,-6 -147,-52 6,-41 41,-50 181,-44 149,5 204,25 274,96 53,55 60,72 143,382 58,216 66,256 55,273 -15,24 -57,31 -72,13 z"
+       id="path8"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

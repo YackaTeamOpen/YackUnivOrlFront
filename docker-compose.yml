@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  yackapp-alpha:
+    container_name: cnt-a-yackapp
+    networks:
+      - yacka-backend
+    image: yackapp:v1
+    build:
+      context: .
+      args:
+        YACKAPPENV: alpha
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./alpha/logs:/yackapp/logs
+    restart: always
+
+  yackapp-prod:
+    container_name: cnt-p-yackapp
+    networks:
+      - yacka-backend
+    image: yackapp:v1
+    build:
+      context: .
+      args:
+        YACKAPPENV: prod
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./prod/logs:/yackapp/logs
+    restart: always
+
+networks:
+  yacka-backend:
+    external: true
+    name: yacka-backend-network

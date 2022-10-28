@@ -1,0 +1,86 @@
+
+.single-value-stat {
+    font-size: 25px;
+}
+
+.stat-title {
+    font-size: 21px;
+}
+
+.multiple-value-stat {
+    font-size: 16px;
+}
+
+/*.multiple-value-stat.row {
+    flex: 1 1 auto;
+}
+*/
+
+.left-no-shrink {
+
+    flex: 0 0 auto;
+}
+
+.right-expand {
+    flex: 1 1 auto;
+}
+.explanation p {
+  font-size: 12px;
+  color: var(--yacka-dark-gray);
+}
+
+.toggle-chevron {
+  text-align: center;
+  margin-bottom: 0rem;
+}
+
+.chevron {
+  /* block or inline-block for smoother animation */
+/*  display: inline-block;
+*/  /* Animation when going back to collapsed state */
+  transform: rotate(0deg);
+  transition: 0.3s;
+}
+
+.fa-rotate-180 {
+  /* This declares the keyframes used for animation */
+  transform: rotate(90deg);
+/*  animation: spin;
+*/  transition: 0.4s
+}
+
+.fa-rotate-90 {
+   This declares the keyframes used for animation
+  transform: rotate(90deg);
+  transition: 0.4s
+}
+
+#trip-map-container, #shtrip-map-container {
+  position: relative;
+  width: 100%;
+  padding: 0px !important;
+}
+
+#trip-map-container:after, #shtrip-map-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#trip-map, #shtrip-map {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1040;
+}
+
+.beforeAfterPolyline {
+  stroke: none;
+  fill: none;
+/*  stroke-dasharray: 10,10;
+  stroke-width: 5;
+*/}
+
+.beforeAfterMarkerIcon {
+  display:  none !important;
+}

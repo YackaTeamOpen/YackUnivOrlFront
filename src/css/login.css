@@ -1,0 +1,30 @@
+
+
+.form-group > .btn, .form-group > a {
+	margin: auto;
+	padding: 0.7rem;
+	width: 100%;
+}
+
+
+.form-group > a,
+#rescue-actions a {
+	cursor: pointer;
+}
+
+#forgot-pwd-btn {
+  background-color: var(--light);
+}
+
+#forgot-pwd-btn:hover {
+  background-color: transparent;
+}
+
+#resend-emailcheck-btn {
+  background-color: var(--yacka-green);
+}
+
+#resend-emailcheck-btn:hover {
+  background-color: transparent;
+}
+/*# sourceMappingURL=login.css.map */

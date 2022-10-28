@@ -1,0 +1,33 @@
+.btn-fix-ctr {
+  position: fixed;
+  width: 200px;
+	margin-right: -100px;
+  height: auto;
+  right: 50%;bottom: 20px;
+  z-index: 10000;
+}
+
+input#address {
+		background-image: url('http://cnt-a-yackapp:3000/img/icons/green_donut.svg');
+		background-size:15px;
+		background-position: left;
+		background-origin: content-box;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+    height: 40px;
+}
+
+#mapid {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.yacka-label {
+  padding-bottom: 6px;
+  padding-left: 4px;
+}
+
+.yackard-body {
+  width: auto
+}

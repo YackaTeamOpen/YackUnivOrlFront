@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Yacka - Tutoriel</title>
+	<meta name="description" content="Free bootstrap template Atlas">
+	<link rel="icon" href="img/favicon.png" sizes="32x32" type="image/png">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+	<!-- custom.css -->
+  <link href="../css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/cookiealert.css" media="all">
+	<!-- bootstrap.min.css -->
+	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- font-awesome -->
+	<link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- AOS -->
+	<link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/howto.css">
+</head>
+
+<body>
+
+
+	<!-- banner -->
+	<div class="jumbotron jumbotron-fluid main-img" id="banner">
+		<div class="container text-center text-md-left">
+			<header>
+        <div class="row justify-content-between">
+          <div class="col-12">
+            <img src="img/brand/logo.svg" alt="logo">
+          </div>
+        </div>
+			</header>
+      <div class="container d-md-flex flex-md-row" id="banner-content">
+        <div class="d-flex flex-column justify-content-center">
+          <div class="d-block">
+            <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-4 text-white font-weight-bold my-4" id="banner-text">
+            </h1>
+          </div>
+          <div class="d-none d-md-block">
+              <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="h5 text-white my-2 tuto-welcome"></p>
+              <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="hint-message text-white my-2"></p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-12 d-block d-md-none">
+              <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="h5 text-white my-2 tuto-welcome"></p>
+              <p data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="hint-message text-white my-2"></p>
+          </div>
+<!--             <div class="col-5 col-md-12">
+              <img id="yackar"/>
+          </div>
+-->
+        </div>
+      </div>
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="ob-missing unauthorized all-ok col-12 align-self-center text-left" style="display:none;">
+            <a href="" class="btn btn-yacka-dark rounded-pill shadow-sm yacka-white-text">Passer le tuto</a>
+          </div>
+        </div>
+      </div>
+
+
+<!--  			<a class='btn btn-yacka-dark yacka-white-text rounded-pill shadow-sm mt-2' href="howto.html"><b>Partager votre premier trajet</b></a>
+ -->
+      <div>
+        <div class="ml-auto mr-auto mt-3 mb-3 bounce scroll-chevron"></div>
+      </div>
+  	</div>
+  </div>
+
+
+<!-- floating cards -->
+  <div class="floating-area">
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-1">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-lg-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!-- 							<a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-lg-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					<img src="" alt="" class="replaceable right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4 d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+          <div class="black-layer clickable rounded-corner-img"></div>
+          <div class="text-pane-mobile clickable">
+            <h5 class="card-title text-white"></h5>
+            <p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+          </div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-2">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="replaceable left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+					<div class="black-layer clickable rounded-corner-img"></div>
+					<div class="text-pane-mobile clickable">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-3">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					 <img src="" alt="" class="replaceable right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+					<div class="black-layer clickable rounded-corner-img"></div>
+					<div class="text-pane-mobile clickable">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-4">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="replaceable left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+					<div class="black-layer clickable rounded-corner-img"></div>
+					<div class="text-pane-mobile clickable">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- card on left-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-5">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card left-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-right rounded-corner-img">
+					 <img src="" alt="" class="replaceable right-pane rounded-corner-img">
+          </div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+					<div class="black-layer clickable rounded-corner-img"></div>
+					<div class="text-pane-mobile clickable">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white">.</p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- card on right-->
+	<div class="jumbotron jumbotron-fluid feature jumbo-card feature-first floating-card" id="floating-6">
+
+		<div class="container my-4 d-none d-lg-block"><!-- only big screen-->
+			<div class="row justify-content-between text-center text-md-left">
+
+
+
+				<div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center down-pane">
+          <div class="img-div-left rounded-corner-img">
+  					<img src="" alt="" class="replaceable left-pane rounded-corner-img">
+          </div>
+				</div>
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 up-pane card-container">
+					<div class="card right-pane" style="margin-bottom: 0;">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+              <p class="card-link clickable"></p>
+<!--              <a href="#" class="card-link"></a>
+ -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="container my-4  d-block d-lg-none"><!-- only small screen-->
+			<div class="row no-gutters justify-content-center text-center text-md-left">
+
+				<div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-8 d-flex-centered">
+          <div class="img-div-small rounded-corner-img">
+            <img src="" alt="" class="replaceable rounded-corner-img clickable">
+          </div>
+					<div class="black-layer clickable rounded-corner-img"></div>
+					<div class="text-pane-mobile clickable">
+						<h5 class="card-title text-white"></h5>
+						<p class="card-text text-white"></p>
+            <p class="card-link clickable"></p>
+<!--             <a href="#" class="card-link"></a>
+ -->
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+  </div>
+
+<div class="jumbotron jumbotron-fluid" id="footer">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="all-ok col-12" style="display:none;">
+        <div class="container d-flex flex-row pr-0">
+            <div class="btn-group-fab-index" role="group" aria-label="FAB Menu">
+              <div class="btn-main-sub-wrap">
+                <button type="button"
+                  class="btn btn-sub btn-yacka-white rounded-pill has-tooltip shadow-sm driver" data-placement="left"
+                  title="Proposer un trajet"><span class="btn-sub-content"><span class="btn-sub-label mr-1">Conducteur</span><img width="18" src='../img/icons/driver_icon.svg'></span></button>
+                <button type="button"
+                  class="btn btn-sub btn-yacka-white rounded-pill has-tooltip shadow-sm passenger" data-placement="left"
+                  title="Demander un trajet"><span class="btn-sub-content"><span class="btn-sub-label mr-1">Passager</span><img width="16" src='../img/icons/hep_icon.svg'></span></button>
+                <button type="button" class="btn btn-main btn-yacka-dark yacka-white-text rounded-pill has-tooltip shadow-sm" data-placement="left"
+                  title="Partager un trajet"><span class="btn-main-label"><span><b>C'est parti !</b></span></span><span class="btn-main-icon"><i class="fa fa-times"></i></span></button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="ob-missing unauthorized col-12 align-self-center text-right" style="display:none;">
+        <a href="" class="lead btn btn-yacka-dark rounded-pill shadow-sm yacka-white-text">C'est parti !<i class='fa fa-chevron-right mx-1'></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/aos.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/howto.js"></script>
+
+<script>
+AOS.init({});
+</script>
+
+<!-- Facebook Pixel Code -->
+
+<!-- <script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '315838472734623');
+fbq('track', 'PageViewYacka');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=315838472734623&ev=PageViewYacka&noscript=1"
+/></noscript>
+ -->
+<!-- End Facebook Pixel Code -->
+
+<!-- Linkedin Pixel Code -->
+
+<!-- <script type="text/javascript">
+_linkedin_partner_id = "3528017";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3528017&fmt=gif" />
+</noscript>
+ -->
+<!-- End Linkedin Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRZQCMFRXG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RRZQCMFRXG');
+</script>
+ -->
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+* Yacka Dev Team
+* Base page for User
+* Mai 2019
+-->
+
+<html lang="fr">
+
+<head>
+	<base href="./">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Yacka">
+	<meta name="author" content="Yacka Dev Team">
+	<meta name="keyword"
+	content="Yacka,yacka,covoiturage,co-voiturage,auto partage,Centre Val de Loire,Centre Val-de-Loire,BlaBlaCar,blablacar,Karos,domicile,travail,économie,LaRoueVerte.com,voiture,Klaxit,BlaBlaLines,blablalines">
+	<title>Yacka - Trajets Configurés</title>
+	<link rel="shortcut icon" href="../img/favicon.png">
+	<!-- Icons-->
+	<link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+	<link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+
+<!-- 	<link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+ -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet'>
+	<link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+	<!-- Main styles for this application-->
+  <link href="../node_modules/litepicker/dist/css/litepicker.css" rel="stylesheet">
+  <link href="../node_modules/litepicker/dist/css/plugins/mobilefriendly.js.css" rel="stylesheet">
+  <link href="../node_modules/litepicker/dist/css/plugins/multiselect.js.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+	<link href="../css/common.css" rel="stylesheet">
+	<link href="../css/users/trips.css" rel="stylesheet">
+	<link href="../vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+  <link href="../css/loader.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed sidebar-lg-show">
+	<div class="yacka-header">
+		<header style="border:none;" class="app-header navbar">
+      <a class="navbar-brand" href="home.html">
+        <img class="navbar-brand-full" src="../img/brand/logo.svg" width="100" height="40">
+        <img class="navbar-brand-minimized" src="../img/brand/logo.svg" width="30" height="30">
+      </a>
+      <a class="nav-item dropdown">
+        <a class="nav-link">
+          <img id="settings-btn" class="img-avatar clickable ml-1" width="30" height="30" >
+        </a>
+      </a>
+		</header>
+		<div class="header-offset">
+      <div class="text-left">
+        <div class="content">
+          <a href="home.html"><i class="fa fa-chevron-left fa-lg yacka-green-text mt-3 mr-2" style="float:left;font-size:20px;"></i></a>
+          <p id="hello-world" class="mt-1 pb-0 yacka-white-text" style="font-size:25px;">Vos trajets enregistrés</p>
+
+<!--          <p id="hello-world-msg" class="mb-0 mt-0 ml-2 pb-0 yacka-white-text" style="font-size:15px;">(propositions / demandes)</p>
+ -->
+        </div>
+      </div>
+		</div>
+	</div>
+
+	<div class="app-body">
+    <div id="modals-holder">
+      <div hidden id="animated-loader" class="yacka-loader">
+        <i class="js-spin yohoo"><img src='../img/logo/VY.png'/></i>
+      </div>
+    </div>
+		<main class="main">
+			<div class="content animated-fade-in">
+				<div class="yackard">
+					<div class="yackard-body" id="trips">
+            <div id="trip-container-intro">
+            </div>
+            <div id="trip-container">
+            </div>
+            <div id="waiting-trip-container-intro">
+            </div>
+            <div id="waiting-trip-container">
+            </div>
+            <div class="card shadow-sm" id="no-data-card" style="display: none;">
+              <div class="card-body" style="padding-bottom: 0.5rem;">
+                <h4>Il semble que vous n'ayez pas de trajet enregistré.</h4>
+                <p>Commencez par <b>proposer un trajet</b> en tant que conducteur ou <b>rechercher un trajet</b> en
+                  tant que passager. Pour cela, <b>cliquez ci-dessous ou sur le bouton vert en bas à
+                    droite</b></p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="new_trip.html?role=driver">
+                      <p class="btn btn-pill btn-lg yacka-button-valid" style="height: auto;"><i class="fa fa-plus"></i> Proposer un trajet</p>
+                    </a>
+                  </div>
+
+                  <div class="col-md-6">
+                    <a href="new_trip.html?role=passenger">
+                      <p class="btn btn-pill btn-lg yacka-button-valid" style="height: auto;"><i class="fa fa-search"></i> Rechercher un trajet</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<!-- CoreUI and necessary plugins-->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/litepicker/dist/litepicker.js"></script>
+  <script src="../node_modules/litepicker/dist/plugins/mobilefriendly.js"></script>
+  <script src="../node_modules/litepicker/dist/plugins/multiselect.js"></script>
+	<script src="../node_modules/pace-progress/pace.min.js"></script>
+	<script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+	<!-- Plugins and scripts required by this view-->
+	<script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+	<script src="../node_modules/@coreui/coreui-plugin-chartjs-custom-tooltips/dist/js/custom-tooltips.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="../node_modules/rrule/dist/es5/rrule.min.js"></script>
+	<script src="../js/common.js"></script>
+  <script src="../js/state_display.js"></script>
+	<script src="../js/users/trips.js"></script>
+</body>
+
+</html>
