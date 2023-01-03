@@ -183,7 +183,7 @@ function displaySharedTripOptions(cardType, element, index, user, agenda, state 
     if (element.classList.contains('already-toggled') == false) {
       element.classList.add('already-toggled');
       let trip = (cardType == 'act-card') ? agenda.shared_trips[index]
-        : agenda.shared_trips[agenda.agenda_indexes[index].index];
+          : agenda.shared_trips[agenda.agenda_indexes[index].index];
       let is_driver = (user.id == trip.trip_driver_id);
       let otherOccupant = "";
       if (is_driver) {
@@ -226,8 +226,6 @@ function displaySharedTripOptions(cardType, element, index, user, agenda, state 
         html += getshtDatesHTML(trip, is_driver, uniqueId, state, stage);
         html += '    </div>';
       } else {
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         html += '    <div class="tab-pane fade sht-checked-pane" id="sht-checked-pane' + uniqueId + '" role="tabpanel">';
         html += '      <div class="sht-checked-pane-content" id="sht-checked-trips' + uniqueId + '" role="tabpanel">';
         html += ' <h3 class="h3-top text-center">Marche à suivre pour la validation du trajet :</h3>';
@@ -236,12 +234,17 @@ function displaySharedTripOptions(cardType, element, index, user, agenda, state 
         html += '<button type="button" class="btn btn-success validation valid-trajet">Valider le trajet</button>';
         html += '<div class="div-bottom text-center flex-div"><i class="material-icons">location_off</i>'
         html += ' <p>Assurez-vous d\'avoir la localisation activée.</p>';
-        html += '<i class="material-icons has-tooltip" data-placement="left" title="Partager un trajet">help_outline</i>'
+        html += '<i class="material-icons" data-toggle="tooltip" data-placement="top">help_outline</i>'
+        html += '<div class="tooltip">Lorem Ipsum</div>'
         html += '</div>';
         html += getshtProofInfoHTML(trip, is_driver, uniqueId, state, stage);
         html += '      </div>';
         html += '    </div>';
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
       }
+
       html += '  </div>';
       node.insertAdjacentHTML("beforeend", html);
       let nodeToToggle = element.appendChild(node);
