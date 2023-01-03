@@ -226,14 +226,23 @@ function displaySharedTripOptions(cardType, element, index, user, agenda, state 
         html += getshtDatesHTML(trip, is_driver, uniqueId, state, stage);
         html += '    </div>';
       } else {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         html += '    <div class="tab-pane fade sht-checked-pane" id="sht-checked-pane' + uniqueId + '" role="tabpanel">';
         html += '      <div class="sht-checked-pane-content" id="sht-checked-trips' + uniqueId + '" role="tabpanel">';
+        html += ' <h3 class="h3-top text-center">Marche à suivre pour la validation du trajet :</h3>';
+        html += ' <p class="text-center p-center">Il est nécessaire de valider le point de départ ainsi que le point d\'arrivée.' +
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
+        html += '<button type="button" class="btn btn-success validation valid-trajet">Valider le trajet</button>';
+        html += '<div class="div-bottom text-center flex-div"><i class="material-icons">location_off</i>'
+        html += ' <p>Assurez-vous d\'avoir la localisation activée.</p>';
+        html += '<i class="material-icons has-tooltip" data-placement="left" title="Partager un trajet">help_outline</i>'
+        html += '</div>';
         html += getshtProofInfoHTML(trip, is_driver, uniqueId, state, stage);
         html += '      </div>';
         html += '    </div>';
       }
       html += '  </div>';
-
       node.insertAdjacentHTML("beforeend", html);
       let nodeToToggle = element.appendChild(node);
       let tabList = element.querySelectorAll('#pills-tab' + uniqueId + ' a');

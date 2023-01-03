@@ -201,3 +201,53 @@
   font-weight: 700;
   border: 1px solid var(--yacka-white);
 }
+
+.h3-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* décalage négatif de la moitié de la largeur de l'élément */
+  width: 100%;
+  margin-top: 3%;
+}
+
+.div-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* décalage négatif de la moitié de la largeur de l'élément */
+  width: 100%;
+}
+
+.p-center {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.valid-trajet {
+  background-color: var(--yacka-green);
+  color: var(--yacka-white);
+  border-color: var(--yacka-green);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  margin-bottom: 20px;
+}
+
+.flex-div > p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
