@@ -231,10 +231,6 @@
   background-color: var(--yacka-green);
   color: var(--yacka-white);
   border-color: var(--yacka-green);
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .flex-div {
@@ -254,4 +250,15 @@ i {
 
 .tooltip {
   display: none;
+}
+
+.validate_screen {
+  display: none;
+}
+
+.div-button{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
