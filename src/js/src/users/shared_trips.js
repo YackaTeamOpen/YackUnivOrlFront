@@ -242,6 +242,15 @@ function displaySharedTripOptions(cardType, element, index, user, agenda, state 
         html += ' <h3 class="h3-top text-center">Validation du trajet pour le point de départ :</h3>';
         html += ' <div>';
         html += '</div>';
+        html +='<div class="d-flex align-items-center" id="divprogressbar">\n' +
+            '                                     <span> <i class="fas fa-map-pin fa-8x text-info" ></i></span>\n' +
+            '                                        <div class="col text-center">\n' +
+            '                                                <div class="progress">\n' +
+            '                                                    <div class="progress-bar w-25" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>\n' +
+            '                                                </div>\n' +
+            '                                        </div>\n' +
+            '                                     <span> <i class="fas fa-flag-checkered fa-8x text-secondary"></i></span>\n' +
+            '                                    </div>';
         html += '<div class="div-button flex-div"><button type="button" class="btn btn-success validation valid-trajet" id="validate_start">Valider le point de départ</button>';
         html += '<i class="material-icons tooltipped" data-position="top" data-tooltip="Lorem Ipsum">help_outline</i></div>';
         html += '<div class="div-bottom text-center flex-div"><i class="material-icons">location_off</i>'
