@@ -21,6 +21,7 @@
 	<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' rel='stylesheet'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 	<!-- Main styles for this application-->
 	<link href="../vendors/pace-progress/css/pace.min.css" rel="stylesheet">
@@ -71,13 +72,28 @@
 					<div class="card-body" style="padding-bottom: 0.5rem;">
 						<h4>Vos Yackteurs</h4>
 						<div class="toggle-info" id="subscriber-info">
+
               <div class="d-flex flex-row justify-content-start align-items-center multiple-value-stat">
                 <div class='pr-2'><i class='clickable fas fa-chevron-circle-right chevron toggle-chevron'></i></div>
                 <div class='single-value-stat pl-0'><span id="nb-subscribers"></span><span class="yacka-green-text"> / </span><span id="max-nb-subscribers"></span>
                 </div>
               </div>
-              <ul class="info-to-toggle" id="subscriber-list" style="display: none;">
-              </ul>
+                            <div class="info-to-toggle" style="display: none;">
+                                <div>
+                                    <div id="toolbar">
+                                        <select id="formcontrolperiode" class="form-control">
+                                            <option value="">Période à sélectionner</option>
+                                            <option value="one_month">le mois dernier</option>
+                                            <option value="three_month">les 3 derniers mois</option>
+                                            <option value="six_month">les 6 derniers mois</option>
+                                        </select>
+                                    </div>
+                                    <table class="table table-striped" id="subscriber-table">
+                                    </table>
+                                </div>
+                                <ul  id="subscriber-list">
+                                </ul>
+                            </div>
 						</div>
           </div>
         </div>
@@ -131,10 +147,8 @@
                 </div>
               </div>
             </div>
-
 					</div>
 				</div>
-
         <div class="card shadow-sm">
           <div class="card-body" style="padding-bottom: 0.5rem;">
             <div class="toggle-info" id="shtrip-info">
@@ -192,6 +206,8 @@
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/bootstrap-table.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.21.2/dist/locale/bootstrap-table-fr-FR.min.js"></script>
 	<script src="../node_modules/pace-progress/pace.min.js"></script>
 
 	<script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
@@ -210,5 +226,4 @@
 	<script src="../js/onesignal.js"></script>
 	<script src="../js/companies/home.js"></script>
 </body>
-
 </html>

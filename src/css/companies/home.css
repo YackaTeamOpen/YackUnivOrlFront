@@ -50,7 +50,7 @@
 }
 
 .fa-rotate-90 {
-   This declares the keyframes used for animation
+  /* This declares the keyframes used for animation */
   transform: rotate(90deg);
   transition: 0.4s
 }
@@ -84,3 +84,30 @@
 .beforeAfterMarkerIcon {
   display:  none !important;
 }
+#dropdownMenuButton {
+  float: right;
+    margin-bottom: 10px;
+}
+#subscriber-table{
+  white-space: normal;
+}
+
+th {
+  text-align: center;
+}
+
+.bootstrap-table .fixed-table-container .table thead th .th-inner {
+  white-space: normal;
+}
+
+#formcontrolperiode{
+  webkit-appearance: auto;
+  appearance: auto;
+}
+
+
+
+
+
+
+

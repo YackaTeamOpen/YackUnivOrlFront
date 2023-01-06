@@ -54,12 +54,49 @@ function startRender(data, dataType) {
     document.querySelector("#nb-subscribers").innerHTML = data.stats.nb_subscribers;
     document.querySelector("#max-nb-subscribers").innerHTML = data.user.organization.bill.nb_max_employees;
     let subscriberListElem = document.querySelector("#subscriber-list");
-    let subscriberList = data.stats.subscriber_list;
     let subscriberListHtml = "";
-    subscriberList.forEach((subscriber) => {
-      subscriberListHtml += "<li>" + subscriber + "</li>";
-    });
     subscriberListElem.innerHTML = subscriberListHtml;
+    let subscriberTableElem = document.querySelector("#subscriber-table");
+    let subscriberTable = data.stats.subscriber_list;
+    // récupère le nombre de covoiturages d'un utilisateur en tant que conducteur
+    let subscriber_conducteur_nb_trips = data.stats.subscriber_nb_trips;
+    // récupère le nombre de kilomètres parcourus par un utilisateur en tant que conducteur
+    let subscriber_conducteur_nb_km = data.stats.subscriber_nb_km;
+    // récupère le nombre de covoiturages d'un utilisateur en tant que passager
+    let subscriber_passager_nb_trips = data.stats.subscriber_nb_trips_passager;
+    // récupère le nombre de kilomètres parcourus par un utilisateur en tant que passager
+    let subscriber_passager_nb_km = data.stats.subscriber_nb_km_passager;
+    let subscriberTableHtml = "";
+    subscriberTableHtml += "<thead>\n" +
+        "<tr>" +
+        "<th></th>" +
+        "<th id='thconducteur' scope=\"col\" colspan=\"2\">Conducteur</th>" +
+        "<th id='thpassager' scope=\"col\" colspan=\"2\">Passager</th>" +
+        "</tr>" +
+        "<tr>" +
+        "<th scope=\"col\"></th>" +
+        "<th id='thconducteurcovoit' scope=\"col\" data-sortable='true'>Nombre de covoiturages</th>" +
+        "<th id='thconducteurkm' scope=\"col\" data-sortable='true'>Nombre de kilomètres</th>" +
+        "<th id='thpassagercovoit' scope=\"col\" data-sortable='true'>Nombre de covoiturages</th>" +
+        "<th id='thpassagerkm' scope=\"col\" data-sortable='true'>Nombre de kilomètres</th>" +
+        "</tr>" +
+        "</thead>";
+
+    subscriberTable.forEach((subscriber) => {
+        subscriberTableHtml += "<tr><td>" + subscriber + "</td>" +
+            "<td>" + Math.floor(Math.random() * 10) + 1 + "</td>" +
+            "<td>" + Math.floor(Math.random() * 100) + 1 + "</td> " +
+            "<td>" + Math.floor(Math.random() * 10) + 1 + "</td>" +
+            "<td>" + Math.floor(Math.random() * 100) + 1 + "</td>";
+            "</tr>";
+    });
+    subscriberTableElem.innerHTML = subscriberTableHtml;
+    let table = document.getElementById("subscriber-table");
+    table.setAttribute("data-search", "true");
+    table.setAttribute("data-mobile-responsive", "true");
+    table.setAttribute("data-toolbar", "#toolbar");
+    table.setAttribute("data-pagination", "true");
+    $('#subscriber-table').bootstrapTable({data: table});
     document.querySelectorAll(".toggle-info").forEach((elem) => {
       elem.querySelector(".toggle-chevron").addEventListener(
         "click",
